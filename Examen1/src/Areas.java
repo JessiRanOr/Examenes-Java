@@ -1,24 +1,24 @@
+
 class Areas {
 
 	public static void main(String[] args) {
 		
-		Rectangulo rec = new Rectangulo();
-		Triangulo tri = new Triangulo();
-		
-		System.out.println("Vamos a obtener área de un rectangulo");	
-		
-		//Área de rectangulo
-		rec.obtenerDatos();
-		rec.calculaArea();
-		rec.muestraArea();
-		
-		
-		System.out.println("Ahora vamos a obtener área de un triangulo");
-		//Área de triangulo
-		tri.obtenerDatos();
-		tri.calculaArea();
-		tri.muestraArea();
+		FiguraGeometrica fig1 = new Rectangulo();
+		calculos(fig1);
+
+		FiguraGeometrica fig2 = new Triangulo();
+		calculos(fig2);
+
+	}
+
+	private static void calculos(FiguraGeometrica fig) {
+		System.out.println("Ahora vamos a obtener área de un: "+
+				fig.toString());
+		fig.obtenerDatos();
+		((InterfaceArea)fig).calculaArea();//Polimorfismo
+		fig.muestraArea();
 
 	}
 
 }
+

@@ -1,4 +1,3 @@
-
 public class Triangulo extends FiguraGeometrica implements InterfaceArea{
 	
 	

@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
-//clase abstracta: declara la existencia de métodos pero no los implementa
+//clase abstracta: declara la existencia de métodos abstractos, 
+// es decir no los implementa
 public abstract class FiguraGeometrica {
+	
 	int base;
 	int altura;
 	int area;
 
-	
 	//método obtener datos
 	public void obtenerDatos() {
 		Scanner lectura = new Scanner(System.in);
@@ -21,6 +22,11 @@ public abstract class FiguraGeometrica {
 
 	//método abstracto para mostrar el área: la implementación la realizan las subclases
 	public abstract void muestraArea();
+	
+	@Override
+	public String toString() {
+		return this.getClass().getSimpleName();
+	}
 	
 	
 
